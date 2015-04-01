@@ -5,8 +5,18 @@
                 android:background="@mipmap/main_bg"
                 tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="A"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"/>
+
 
     <com.jacob.circle.disc.CircleIndexView
+        android:id="@+id/circle_index_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
