@@ -180,6 +180,10 @@ public class CircleIndexView extends ViewGroup {
                 switch (quadrant) {
                     case 2:
                     case 3:
+                        //这里2，3像限之所以是start-end，
+                        // 是因为在顺时针旋转的情况下，这两个象限所获取的角度是逐渐减小的
+                        //所以为了和1，4象限一样保证，角度差值是正值，所以用start-end
+                        //当然同理，逆时针旋转角度差都是负数
                         mAngle += startAngle - endAngle;
                         break;
                     case 1:
@@ -192,6 +196,8 @@ public class CircleIndexView extends ViewGroup {
                     mAngle = 0;
                 }
                 updateCenterLetterAndView();
+
+                //每次处理完成之后需要更新上次位置的信息
                 mLastX = x;
                 mLastY = y;
                 break;
