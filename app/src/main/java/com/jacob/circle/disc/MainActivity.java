@@ -23,7 +23,8 @@ public class MainActivity extends FragmentActivity {
                 mTextView.setText(letter);
             }
         });
-        circleIndexView.setIndexLetter("b");
+        circleIndexView.setIndexLetter("G");
+        mTextView.setText("G");
 
 
     }
